@@ -1,14 +1,18 @@
-var winWidth = 1400, winHeight = 800;
-var angle;
-var circleCenterY = winHeight / 2;
-var circleCenterX = 3 * winWidth / 8;
-var circleRadius = winHeight / 4;
-const skeletonColor = 180;
-var maxAngle = 0;
-var minAngle = 0;
+var angle, winWidth, winHeight, circleCenterY, circleCenterX, circleRadius,
+skeletonColor, maxAngle, minAngle;
 
 function setup() {
+  
+  winWidth = displayWidth;
+  winHeight = displayHeight;
+  circleCenterY = winHeight / 2
+  circleCenterX = 3 * winWidth / 8
+  circleRadius = winHeight / 4
+  skeletonColor = 180
+  maxAngle = 0
+  minAngle = 0
   angle = createSlider(-6.28, 12.56, 0, 0.00001);
+  
   angle.position(10, 10);
   createCanvas(winWidth, winHeight);
   stroke(0);
@@ -44,7 +48,6 @@ function drawCircle(x, y, r) {
   rect(x-r*0.1, y-r*1.2, r*0.2, r*0.15); //top
   rect(x-r*0.1, y+r*1.05, r*0.2, r*0.15); //bottom
   rect(x-r*1.25, y-r*0.075, r*0.2, r*0.15); //left
-  rect(x+r*1.05, y-r*0.075, r*0.2, r*0.15); //right
     push();
       fill(0);
       strokeWeight(0);
@@ -52,7 +55,6 @@ function drawCircle(x, y, r) {
       text("0 , 1", x-r*0.07, y-r*1.1); //top
       text("0 ,-1", x-r*0.07, y+r*1.15); //bottom
       text("-1, 0", x-r*1.22, y+r*0.03); //left
-      text("1 , 0", x+r*1.07, y+r*0.03); //right
     pop();
   pop();
   drawCos(x,y,r);
