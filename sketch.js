@@ -1,3 +1,12 @@
+/*
+Written by Grady Marshall
+Last updated 12/18/19
+Built for the purpose of helping people better understand how Trigonometry works
+Free to use for anyone who can benefit from it
+*/
+
+
+
 var angle, winWidth, winHeight, circleCenterY, circleCenterX, circleRadius,
 skeletonColor, maxAngle, minAngle;
 
